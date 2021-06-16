@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Balance", "Balance.rptproj", "{8A18E981-7492-457B-80E7-7A3F739B85BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A18E981-7492-457B-80E7-7A3F739B85BF}.Debug|Default.ActiveCfg = Debug
+		{8A18E981-7492-457B-80E7-7A3F739B85BF}.Debug|Default.Build.0 = Debug
+		{8A18E981-7492-457B-80E7-7A3F739B85BF}.Debug|Default.Deploy.0 = Debug
+		{8A18E981-7492-457B-80E7-7A3F739B85BF}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{8A18E981-7492-457B-80E7-7A3F739B85BF}.DebugLocal|Default.Build.0 = DebugLocal
+		{8A18E981-7492-457B-80E7-7A3F739B85BF}.Release|Default.ActiveCfg = Release
+		{8A18E981-7492-457B-80E7-7A3F739B85BF}.Release|Default.Build.0 = Release
+		{8A18E981-7492-457B-80E7-7A3F739B85BF}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA320180-780C-4E3E-BC5B-F21F998EBDCD}
+	EndGlobalSection
+EndGlobal

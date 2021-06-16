@@ -1,0 +1,2583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <InitialPageName>1 Property Information</InitialPageName>
+  <DataSources>
+    <DataSource Name="DS_DW">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=10.204.10.85;Initial Catalog=DW_Elite</ConnectString>
+        <IntegratedSecurity>true</IntegratedSecurity>
+      </ConnectionProperties>
+      <rd:SecurityType>Integrated</rd:SecurityType>
+      <rd:DataSourceID>d94968ec-5f88-469f-98c2-a5bcdf5e4299</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="DW_Elite_SSRS">
+      <DataSourceReference>DW_Elite_SSRS_2021Balance</DataSourceReference>
+      <rd:SecurityType>DataBase</rd:SecurityType>
+      <rd:DataSourceID>9c1ea3ca-0fb4-425a-9eda-1bda5f97f808</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="PropertyInfo">
+      <Query>
+        <DataSourceName>DS_DW</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@PropertyID">
+            <Value>=Parameters!PropertyID.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>select * from [BIS-SQL01].[DW_Elite].[dbo].[YardiTotalUnitsList]
+where [Property ID]  = @PropertyID</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Property_ID">
+          <DataField>Property ID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Property_Name">
+          <DataField>Property Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Property_Address">
+          <DataField>Property Address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="State">
+          <DataField>State</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Zip_Code">
+          <DataField>Zip Code</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Unit_Count">
+          <DataField>Unit Count</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Property_Phone_Number">
+          <DataField>Property Phone Number</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Previous_Name">
+          <DataField>Previous Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PM">
+          <DataField>PM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Legal_Entity_Name">
+          <DataField>Legal Entity Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Property_Insurance">
+          <DataField>Property Insurance</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Property_Status">
+          <DataField>Property Status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ownership">
+          <DataField>Ownership</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Fund_Investment">
+          <DataField>Fund Investment</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Fund_Investment_II">
+          <DataField>Fund Investment II</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID3rd_Party">
+          <DataField>3rd Party</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RM">
+          <DataField>RM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AVP">
+          <DataField>AVP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RVP">
+          <DataField>RVP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sr_RVP">
+          <DataField>Sr RVP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Region">
+          <DataField>Region</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Geographic_Area">
+          <DataField>Geographic Area</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CRM_Platform">
+          <DataField>CRM Platform</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Property_Type">
+          <DataField>Property Type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Student_Population__">
+          <DataField>Student Population %</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Accounting_Manager">
+          <DataField>Accounting Manager</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Accounting_Supervisor">
+          <DataField>Accounting Supervisor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GL_Accountant">
+          <DataField>GL Accountant</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AP_Accountant">
+          <DataField>AP Accountant</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Construction_Accountant">
+          <DataField>Construction Accountant</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Construction_AP">
+          <DataField>Construction AP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CapEx_Basis">
+          <DataField>CapEx Basis</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Financial_Due_Date">
+          <DataField>Financial Due Date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Class_of_Property">
+          <DataField>Class of Property</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Regional_Trainer">
+          <DataField>Regional Trainer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Pricing_Advisor">
+          <DataField>Pricing Advisor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HR_Rep">
+          <DataField>HR Rep</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HR_Recruiter">
+          <DataField>HR Recruiter</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Budget_Due_Date">
+          <DataField>Budget Due Date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sales_Tax_Filing">
+          <DataField>Sales Tax Filing</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Director_of_Construction">
+          <DataField>Director of Construction</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Regional_Construction_Manager">
+          <DataField>Regional Construction Manager</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sr_Construction_Project_Manager">
+          <DataField>Sr Construction Project Manager</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Construction_Project_Manager">
+          <DataField>Construction Project Manager</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Construction_Project_Coordinator">
+          <DataField>Construction Project Coordinator</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Marketing_Rep">
+          <DataField>Marketing Rep</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID1st_Full_Yr_Owned">
+          <DataField>1st Full Yr Owned</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Purchase_Date">
+          <DataField>Purchase Date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Management_Takeover_Date">
+          <DataField>Management Takeover Date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Revenue_Mgmt_System">
+          <DataField>Revenue Mgmt System</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Resident_Utility_Billing">
+          <DataField>Resident Utility Billing</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="County">
+          <DataField>County</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Collections">
+          <DataField>Collections</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Regional_Facilities_Manager">
+          <DataField>Regional Facilities Manager</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Cashflow_Ranking">
+          <DataField>Cashflow Ranking</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dispo_Date">
+          <DataField>Dispo Date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="State1">
+          <DataField>State1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BH_Asset_Manager">
+          <DataField>BH Asset Manager</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="PropertyID">
+      <Query>
+        <DataSourceName>DW_Elite_SSRS</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@BudgetID">
+            <Value>=Parameters!BudgetID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT DISTINCT
+		DM.[PropertyID]
+		,DM.[BudgetID]
+
+
+FROM [DW_Elite_SSRS].[dbo].[Date_Manager] DM
+
+WHERE DM.[BudgetID] = @BudgetID</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="PropertyID">
+          <DataField>PropertyID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BudgetID">
+          <DataField>BudgetID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Action">
+      <Query>
+        <DataSourceName>DS_DW</DataSourceName>
+        <CommandText>Select 'View' AS [Action]  </CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Action">
+          <DataField>Action</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="StoredProcedure">
+      <Query>
+        <DataSourceName>DW_Elite_SSRS</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@Actions">
+            <Value>=Parameters!Action.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PropertyID">
+            <Value>=Parameters!PropertyID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@BudgetID">
+            <Value>=Parameters!BudgetID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Tree">
+            <Value>=Parameters!Tree.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>SP_SUMMARYBYGLVIEW</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="PropertyID1">
+          <DataField>PropertyID1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BudgetID1">
+          <DataField>BudgetID1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tree">
+          <DataField>Tree</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FinancialCategoryOrder">
+          <DataField>FinancialCategoryOrder</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FinancialCategoryHeader">
+          <DataField>FinancialCategoryHeader</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FinancialCategoryName">
+          <DataField>FinancialCategoryName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Account1">
+          <DataField>Account1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AccountName">
+          <DataField>AccountName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GLActualAmount">
+          <DataField>GLActualAmount</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BYBudgetAmount">
+          <DataField>BYBudgetAmount</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Variance">
+          <DataField>Variance</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Percent_Variance">
+          <DataField>Percent Variance</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Annualize">
+          <DataField>Annualize</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Annualize_Variance">
+          <DataField>Annualize Variance</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Annualize_Percent_Variance">
+          <DataField>Annualize Percent Variance</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Budget_Per_Unit">
+          <DataField>Budget Per Unit</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PY_Per_Unit">
+          <DataField>PY Per Unit</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Annualize_Per_Unit">
+          <DataField>Annualize Per Unit</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Comments">
+          <DataField>Comments</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Tree">
+      <Query>
+        <DataSourceName>DW_Elite_SSRS</DataSourceName>
+        <CommandText>-- ************************************************************
+-- VIEW STATEMENT--
+-- ************************************************************
+--DECLARE @PropertyID VARCHAR(MAX) 
+--DECLARE @BudgetID VARCHAR(MAX)
+--DECLARE @Tree VARCHAR(MAX)
+DECLARE @Growth FLOAT
+DECLARE @UnitCount INT
+-- ************************************************************
+-------------------------HARDCODED TREE-------------------
+--SET @PropertyID = '1004'
+--SET @BudgetID = 'Operations-2020-03-09-1004 - Brooksfield-2'
+--SET @Tree = 'Budget Tree AM'
+SET @Growth = .03
+SET @UnitCount = ( SELECT [Unit Count] FROM [BIS-SQL01].[DW_Elite].[dbo].[YardiTotalUnitsList]
+WHERE [Property ID] = @PropertyID)
+
+
+-- **************************************************************
+-- **************************************************************
+SELECT DISTINCT
+--PropertyID1
+--,BudgetID1
+--,T12Date
+[Tree]
+--,[FinancialCategoryOrder]
+--,[FinancialCategoryHeader]
+--,[FinancialCategoryName]
+--,Account1
+--,AccountName
+--,SUM(ActualAmount) AS [ActualAmount]
+----,BYMMDDYY1 AS [Budget Date]
+----,Account
+--,SUM(BudgetAmount) AS [BudgetAmount]
+--,[Variance] = SUM(ActualAmount) - SUM(BudgetAmount)
+--,[Percent Variance] = CASE
+--					  WHEN SUM(BudgetAmount) = 0 OR SUM(BudgetAmount) = NULL
+--					  THEN 0
+--					  ELSE ((SUM(ActualAmount) - SUM(BudgetAmount))/SUM(BudgetAmount))
+--					  END
+--,[Budget Per Unit] = (SUM(ActualAmount))/@UnitCount
+--,[PY Per Unit] = (SUM(BudgetAmount))/@UnitCount
+FROM
+(
+
+SELECT 
+		 DM.[PropertyID] AS [PropertyID1]
+		, DM.[BudgetID] AS [BudgetID1]
+		--, DM.[DateLock] 
+		--, DM.[BudgetStartDate] 
+		--, DM.[BudgetEndDate] 
+		--, DM.[BudgetLength] 
+		--, DM.[T12_StartDate] 
+		--, DM.[T12_EndDate] 
+		--, DM.[UnitMixDate]
+		--, DM.[EffectiveRentDate]
+		--, DM.[MarketRentDate]
+		--, DM.[Type]
+		
+	 -- 	--, GLA.[PropertyNo] 
+		--, GLA.[GLAccount] --**
+		--,  GLA.[Description] --**
+		--, GLA.[YearMM] --**
+		
+		, Convert(DATE, GLA.[YearMM] + '01')  AS [T12Date]
+		, GLA.[ActualAmount] --**
+		--, GLA.[BudgetedAmount]
+		--, GLA.[MappingGLAccount]
+		--, [GLA.[AggGLAccount]
+
+		, CA.[Tree]
+		, CA.[FinancialCategoryOrder]
+		, CA.[FinancialCategory]
+		, CA.[FinancialCategoryName]
+		, CA.[FinancialCategoryHeader]
+		, CA.[Account] AS [Account1]
+		, CA.[AccountName]
+
+
+, CONVERT(DATE, CAST(MONTH(Convert(DATE, GLA.[YearMM] + '01') ) AS VARCHAR) +'/01/'+ CAST(YEAR(DM.[BudgetStartDate]) AS VARCHAR) ,101) AS [BYMMDDYY1] --Budget Month and Year
+--, CONVERT(FLOAT,GLA.[ActualAmount])*CONVERT(FLOAT,(1+@growth)) AS [BudgetAmount] -- Budget Amount
+--, CA.[FormulaID] --****
+
+
+
+--INTO TEMP#1
+FROM [DW_Elite_SSRS].[dbo].[Date_Manager] (NOLOCK)											DM
+LEFT JOIN  [BIS-SQL01].[DW_Elite].[dbo].[GLAccountByProperty36Months_WithAggGL] (NOLOCK)				GLA ON GLA.PropertyNo = DM.PropertyID COLLATE DATABASE_DEFAULT
+RIGHT JOIN [DW_Elite_SSRS].[dbo].[Chart_Of_Accounts_Financial_CategoryAccounts] (NOLOCK)	CA ON CA.Account = GLA.GLAccount COLLATE DATABASE_DEFAULT
+
+WHERE 
+--GLA.[PropertyNo] = @PropertyID
+--AND 
+DM.BudgetID = @BudgetID
+--AND CA.Tree = @Tree
+AND Convert(DATE, GLA.[YearMM] + '01') BETWEEN DM.T12_StartDate and DM.T12_EndDate
+AND [FinancialCategory] NOT LIKE 'Gross Potential Rent'
+-- Formula 1
+--AND CA.[FormulaID] = 1 
+--and CA.[Account] = '4400-00'
+
+) A                                                                             
+LEFT JOIN [DW_Elite_SSRS].[dbo].[BudgetYear] (NOLOCK)	BY1 ON BY1.[Account] = A.Account1 COLLATE DATABASE_DEFAULT
+														AND  BY1.[BYMMDDYY] = A.BYMMDDYY1
+WHERE [BudgetID1] = @BudgetID
+AND [PropertyID1] = @PropertyID
+--and [Tree] = @Tree
+GROUP BY [PropertyID1],[BudgetID1],[Tree],[FinancialCategoryOrder],[FinancialCategoryHeader],[FinancialCategoryName],[Account1],[AccountName]
+order BY [Tree] ASC
+--[PropertyID1],[BudgetID1],[FinancialCategoryOrder],[Account1] ASC</CommandText>
+      </Query>
+    </DataSet>
+    <DataSet Name="Growth">
+      <Query>
+        <DataSourceName>DW_Elite_SSRS</DataSourceName>
+        <CommandText>SELECT 'Blank' AS [Label] UNION ALL
+--SELECT 'Rent Growth' AS [Label] UNION ALL
+SELECT 'Other Income Growth' AS [Label] UNION ALL
+SELECT 'Expense Growth' AS [Label] </CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Label">
+          <DataField>Label</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DistributeEquallyMonthly_DefaultValue">
+      <Query>
+        <DataSourceName>DW_Elite_SSRS</DataSourceName>
+        <CommandText>select 'Distribute Equally' AS [Label]</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Label">
+          <DataField>Label</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="BudgetDates">
+      <Query>
+        <DataSourceName>DW_Elite_SSRS</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@BudgetID">
+            <Value>=Parameters!BudgetID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>						
+--DECLARE @BudgetID VARCHAR(MAX)
+--SET @BudgetID = 'Due Diligence-2020-04-27-1004 - Brooksfield'
+
+DECLARE @FromDate DATETIME, @ToDate DATETIME
+SET @FromDate = (SELECT 
+					[BudgetStartDate]
+					--,[BudgetEndDate]
+
+				FROM [DW_Elite_SSRS].[dbo].[Date_Manager]
+				WHERE BudgetID = @BudgetID)
+				--'2020-01-01 00:00:00.000'
+SET @ToDate = (SELECT 
+					--[BudgetStartDate]
+					[BudgetEndDate]
+
+				FROM [DW_Elite_SSRS].[dbo].[Date_Manager]
+				WHERE BudgetID = @BudgetID)
+				--'2021-12-31 23:59:59.000'
+
+--select @fromdate,@ToDate
+
+DECLARE @MonthsAndYears table (Month INT, Year int)
+
+;WITH dates AS 
+(
+    SELECT @FromDate [date],@ToDate as MaxDate
+        UNION ALL
+    SELECT DATEADD(month, 1, t.date) [date],maxdate FROM dates t
+    WHERE  DATEADD(month, 1, t.date)&lt; MaxDate
+)
+SELECT 
+
+	CONVERT(VARCHAR(10),[date],101) [DATE]
+	,right(convert(varchar(10),[date],103),7) [DATELABEL]
+
+FROM dates 
+
+UNION ALL 
+
+ 
+SELECT	'Distribute Equally' [DATE], 'Distribute Equally' [DATELABEL] UNION ALL
+SELECT	'Distribute in Q1' [DATE], 'Distribute in Q1' [DATELABEL] UNION ALL
+SELECT	'Distribute in Q2' [DATE], 'Distribute in Q2' [DATELABEL] UNION ALL
+SELECT	'Distribute in Q3' [DATE], 'Distribute in Q3' [DATELABEL] UNION ALL
+SELECT	'Distribute in Q4' [DATE], 'Distribute in Q4' [DATELABEL] 
+
+
+option (maxrecursion 0)</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="date">
+          <DataField>DATE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DATELABEL">
+          <DataField>DATELABEL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="sp_Growth">
+      <Query>
+        <DataSourceName>DW_Elite_SSRS</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@PropertyID">
+            <Value>=Parameters!PropertyID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@BudgetID">
+            <Value>=Parameters!BudgetID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Action">
+            <Value>=Parameters!Action.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Time">
+            <Value>=Parameters!Time.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@GrowthCategory">
+            <Value>=Parameters!GrowthCategory.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@GrowthAmount">
+            <Value>=Parameters!GrowthAmount.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>sp_Growth</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="PropertyID">
+          <DataField>PropertyID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BudgetID">
+          <DataField>BudgetID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MMDDYYYY">
+          <DataField>MMDDYYYY</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="AnnualRentgrowth">
+          <DataField>AnnualRentgrowth</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Rentgrowth">
+          <DataField>Rentgrowth</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="AnnualOtherIncomeGrowth">
+          <DataField>AnnualOtherIncomeGrowth</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="OtherIncomeGrowth">
+          <DataField>OtherIncomeGrowth</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="AnnualExpenseGrowth">
+          <DataField>AnnualExpenseGrowth</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="ExpenseGrowth">
+          <DataField>ExpenseGrowth</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Type">
+      <Query>
+        <DataSourceName>DW_Elite_SSRS</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@BudgetID">
+            <Value>=Parameters!BudgetID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT [Type]
+FROM [DW_Elite_SSRS].[dbo].[Date_Manager]
+WHERE [BudgetID] = @BudgetID</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Type">
+          <DataField>Type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="TIME">
+      <Query>
+        <DataSourceName>DW_Elite_SSRS</DataSourceName>
+        <CommandText>Select 'Annualize' AS [LABEL]UNION ALL
+Select 'January' AS [LABEL]UNION ALL
+Select 'February' AS [LABEL]UNION ALL
+Select 'March' AS [LABEL]UNION ALL
+Select 'April' AS [LABEL]UNION ALL
+Select 'May' AS [LABEL]UNION ALL
+Select 'June' AS [LABEL]UNION ALL
+Select 'July' AS [LABEL]UNION ALL
+Select 'August' AS [LABEL]UNION ALL
+Select 'September' AS [LABEL]UNION ALL
+Select 'October' AS [LABEL]UNION ALL
+Select 'November' AS [LABEL]UNION ALL
+Select 'December' AS [LABEL]</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="LABEL">
+          <DataField>LABEL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="MarketRent">
+      <Query>
+        <DataSourceName>DW_Elite_SSRS</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@BudgetID">
+            <Value>=Parameters!BudgetID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>--WAITFOR DELAY '00:00:05';  
+SELECT 
+		
+		BY1.[BudgetID]
+		, BY1.[Account]
+		--,[BYMMDDYY]
+		,SUM(BY1.[BudgetAmount]) MarketRent
+		--, COA.AccountName
+
+FROM [DW_Elite_SSRS].[dbo].[BudgetYear] BY1
+--LEFT JOIN [DW_Elite_SSRS].[dbo].[Chart_Of_Accounts] COA ON COA.Account = BY1.Account COLLATE DATABASE_DEFAULT
+
+WHERE 
+ BY1.[BudgetID] = @BudgetID 
+AND 
+		BY1.[Account] IN ('4400-00')--, '4411-00','4499-98')
+	
+
+GROUP BY 
+		BY1.[BudgetID]
+		,BY1.[Account]
+		--, COA.AccountName</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BudgetID">
+          <DataField>BudgetID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Account">
+          <DataField>Account</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MarketRent">
+          <DataField>MarketRent</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Percentages_DefaultValue">
+      <Query>
+        <DataSourceName>DW_Elite_SSRS</DataSourceName>
+        <CommandText>SELECT *
+FROM (
+
+Select'-3%'AS[Label],-0.03AS [VALUE] UNION ALL
+--Select'-2.75%'AS[Label],-0.0275AS [VALUE]UNION ALL
+Select'-2.50%'AS[Label],-0.025AS [VALUE]UNION ALL
+--Select'-2.25%'AS[Label],-0.0225AS [VALUE]UNION ALL
+Select'-2.00%'AS[Label],-0.02AS [VALUE]UNION ALL
+--Select'-1.75%'AS[Label],-0.0175AS [VALUE]UNION ALL
+Select'-1.50%'AS[Label],-0.015AS [VALUE]UNION ALL
+--Select'-1.25%'AS[Label],-0.0125AS [VALUE]UNION ALL
+Select'-1.00%'AS[Label],-0.01AS [VALUE]UNION ALL
+--Select'-0.75%'AS[Label],-0.0075AS [VALUE]UNION ALL
+Select'-0.50%'AS[Label],-0.005AS [VALUE]UNION ALL
+--Select'-0.25%'AS[Label],-0.0025AS [VALUE]UNION ALL
+Select'0.00%'AS[Label],0AS [VALUE]UNION ALL
+--Select'0.25%'AS[Label],0.0025AS [VALUE]UNION ALL
+Select'0.50%'AS[Label],0.005AS [VALUE]UNION ALL
+--Select'0.75%'AS[Label],0.0075AS [VALUE]UNION ALL
+Select'1.00%'AS[Label],0.01AS [VALUE]UNION ALL
+--Select'1.25%'AS[Label],0.0125AS [VALUE]UNION ALL
+Select'1.50%'AS[Label],0.015AS [VALUE]UNION ALL
+--Select'1.75%'AS[Label],0.0175AS [VALUE]UNION ALL
+Select'2.00%'AS[Label],0.02AS [VALUE]UNION ALL
+--Select'2.25%'AS[Label],0.0225AS [VALUE]UNION ALL
+Select'2.50%'AS[Label],0.025AS [VALUE]UNION ALL
+--Select'2.75%'AS[Label],0.0275AS [VALUE]UNION ALL
+Select'3.00%'AS[Label],0.03AS [VALUE]UNION ALL
+--Select'3.25%'AS[Label],0.0325AS [VALUE]UNION ALL
+Select'3.50%'AS[Label],0.035AS [VALUE]UNION ALL
+--Select'3.75%'AS[Label],0.0375AS [VALUE]UNION ALL
+Select'4.00%'AS[Label],0.04AS [VALUE]UNION ALL
+--Select'4.25%'AS[Label],0.0425AS [VALUE]UNION ALL
+Select'4.50%'AS[Label],0.045AS [VALUE]UNION ALL
+--Select'4.75%'AS[Label],0.0475AS [VALUE]UNION ALL
+Select'5.00%'AS[Label],0.05AS [VALUE] UNION ALL
+Select'5.50%'AS[Label],0.055AS [VALUE] UNION ALL
+Select'6.00%'AS[Label],0.06AS [VALUE] UNION ALL
+Select'6.50%'AS[Label],0.065AS [VALUE] UNION ALL
+Select'7.00%'AS[Label],0.07AS [VALUE] UNION ALL
+Select'7.50%'AS[Label],0.075AS [VALUE] UNION ALL
+Select'8.00%'AS[Label],0.08AS [VALUE] UNION ALL
+Select'8.50%'AS[Label],0.085AS [VALUE] UNION ALL
+Select'9.00%'AS[Label],0.09AS [VALUE] UNION ALL
+Select'9.50%'AS[Label],0.095AS [VALUE] UNION ALL
+Select'10.00%'AS[Label],0.10AS [VALUE] 
+) T
+
+WHERE [Label] = '3.00%'</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Label">
+          <DataField>Label</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VALUE">
+          <DataField>VALUE</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="XYZ">
+      <Query>
+        <DataSourceName>DW_Elite_SSRS</DataSourceName>
+        <CommandText>select NULL as [Label]</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Label">
+          <DataField>Label</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Rectangle Name="Rectangle11">
+            <ReportItems>
+              <Subreport Name="Operations2">
+                <ReportName>BP-Payroll</ReportName>
+                <Parameters>
+                  <Parameter Name="action">
+                    <Value>=Parameters!Action.Value</Value>
+                  </Parameter>
+                  <Parameter Name="BudgetID">
+                    <Value>=Parameters!BudgetID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PropertyID">
+                    <Value>=Parameters!PropertyID.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <Left>0.00001in</Left>
+                <Height>3in</Height>
+                <Width>6.85417in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <PageBreak>
+              <BreakLocation>Start</BreakLocation>
+            </PageBreak>
+            <PageName>6 Payroll</PageName>
+            <KeepTogether>true</KeepTogether>
+            <Top>16.79in</Top>
+            <Left>0.72699in</Left>
+            <Height>3in</Height>
+            <Width>7.01389in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle12">
+            <ReportItems>
+              <Subreport Name="SummaryByGLCategory">
+                <ReportName>BP-Summary By GL Category</ReportName>
+                <Parameters>
+                  <Parameter Name="BudgetID">
+                    <Value>=Parameters!BudgetID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PropertyID">
+                    <Value>=Parameters!PropertyID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="Tree">
+                    <Value>=Parameters!Tree.Value</Value>
+                  </Parameter>
+                  <Parameter Name="ParamExpandOrCollapse">
+                    <Value>=Parameters!ParamExpandOrCollapse.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <KeepTogether>true</KeepTogether>
+                <OmitBorderOnPageBreak>true</OmitBorderOnPageBreak>
+                <Left>0.00001in</Left>
+                <Height>3in</Height>
+                <Width>6.85417in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <PageBreak>
+              <BreakLocation>Start</BreakLocation>
+            </PageBreak>
+            <PageName>2 SummaryByGLCategory</PageName>
+            <KeepTogether>true</KeepTogether>
+            <Top>4.18401in</Top>
+            <Left>0.72698in</Left>
+            <Height>3.10417in</Height>
+            <Width>6.85418in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Tablix Name="Tablix5">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.20833in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.19791in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Property Information </Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox24">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Property Name</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox24</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Property_Name">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Property_Name.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Property_Name</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox16">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Unit Count</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox16</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Unit_Count">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Unit_Count.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Unit_Count</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox36">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Regional Vice President</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox36</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="RVP">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!RVP.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>RVP</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox39">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Area Vice President</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox39</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="AVP">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!AVP.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>AVP</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox42">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Regional Manager</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox42</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="RM">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!RM.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>RM</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox21">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Ownership</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox21</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Ownership">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Ownership.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Ownership</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox58">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>CapEx Basis</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox58</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="CapEx_Basis">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!CapEx_Basis.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>CapEx_Basis</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox61">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>City</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox61</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="City">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!City.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>City</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox64">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>State</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox64</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="State">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!State.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>State</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox70">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Legal Entity</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox70</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Legal_Entity_Name">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Legal_Entity_Name.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Legal_Entity_Name</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox67">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Date Lock</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox67</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Today()</Value>
+                                  <Style>
+                                    <Format>d</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details">
+                    <PageBreak>
+                      <BreakLocation>Between</BreakLocation>
+                    </PageBreak>
+                  </Group>
+                  <TablixMembers>
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>PropertyInfo</DataSetName>
+            <Top>1.00346in</Top>
+            <Left>0.72697in</Left>
+            <Height>3in</Height>
+            <Width>5.40624in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Rectangle Name="Rectangle1">
+            <ReportItems>
+              <Subreport Name="SummaryByGL">
+                <ReportName>BP-Summary By GL</ReportName>
+                <Parameters>
+                  <Parameter Name="BudgetID">
+                    <Value>=Parameters!BudgetID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PropertyID">
+                    <Value>=Parameters!PropertyID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="Tree">
+                    <Value>=Parameters!Tree.Value</Value>
+                  </Parameter>
+                  <Parameter Name="ParamExpandOrCollapse">
+                    <Value>=Parameters!ParamExpandOrCollapse.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <Left>0.00001in</Left>
+                <Height>3in</Height>
+                <Width>6.85417in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <PageBreak>
+              <BreakLocation>Start</BreakLocation>
+            </PageBreak>
+            <PageName>3 GL Comparison to Prior Year</PageName>
+            <KeepTogether>true</KeepTogether>
+            <Top>7.42874in</Top>
+            <Left>0.72698in</Left>
+            <Height>3.38889in</Height>
+            <Width>6.85418in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle2">
+            <ReportItems>
+              <Subreport Name="GLOverview">
+                <ReportName>BP-GL Overview</ReportName>
+                <Parameters>
+                  <Parameter Name="BudgetID">
+                    <Value>=Parameters!BudgetID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PropertyID">
+                    <Value>=Parameters!PropertyID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="Tree">
+                    <Value>=Parameters!Tree.Value</Value>
+                  </Parameter>
+                  <Parameter Name="ParamExpandOrCollapse">
+                    <Value>=Parameters!ParamExpandOrCollapse.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <Top>0.09722in</Top>
+                <Height>3in</Height>
+                <Width>6.85417in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <PageBreak>
+              <BreakLocation>Start</BreakLocation>
+            </PageBreak>
+            <PageName>4 GL Overview by Month</PageName>
+            <KeepTogether>true</KeepTogether>
+            <Top>10.4843in</Top>
+            <Left>0.72699in</Left>
+            <Height>3.09722in</Height>
+            <Width>6.85417in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle3">
+            <ReportItems>
+              <Subreport Name="Operations">
+                <ReportName>BP-Operations - View</ReportName>
+                <Parameters>
+                  <Parameter Name="BudgetID">
+                    <Value>=Parameters!BudgetID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PropertyID">
+                    <Value>=Parameters!PropertyID.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <Height>3in</Height>
+                <Width>6.85417in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <PageBreak>
+              <BreakLocation>Start</BreakLocation>
+            </PageBreak>
+            <PageName>5 Operations</PageName>
+            <KeepTogether>true</KeepTogether>
+            <Top>13.65096in</Top>
+            <Left>0.72698in</Left>
+            <Height>3in</Height>
+            <Width>6.85417in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle4">
+            <ReportItems>
+              <Subreport Name="Bonus">
+                <ReportName>BP-Bonus</ReportName>
+                <Parameters>
+                  <Parameter Name="BudgetID">
+                    <Value>=Parameters!BudgetID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PropertyID">
+                    <Value>=Parameters!PropertyID.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <Height>3in</Height>
+                <Width>6.85417in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <PageBreak>
+              <BreakLocation>Start</BreakLocation>
+            </PageBreak>
+            <PageName>7 Bonus</PageName>
+            <KeepTogether>true</KeepTogether>
+            <Top>19.94956in</Top>
+            <Left>0.727in</Left>
+            <Height>3in</Height>
+            <Width>6.85417in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle5">
+            <ReportItems>
+              <Subreport Name="RehabAmeneties">
+                <ReportName>BP-Rehab Amenities - View</ReportName>
+                <Parameters>
+                  <Parameter Name="BudgetID">
+                    <Value>=Parameters!BudgetID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PropertyID">
+                    <Value>=Parameters!PropertyID.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <Height>3in</Height>
+                <Width>6.85417in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <PageBreak>
+              <BreakLocation>Start</BreakLocation>
+            </PageBreak>
+            <PageName>8 Rehab Amenities</PageName>
+            <KeepTogether>true</KeepTogether>
+            <Top>23.28289in</Top>
+            <Left>0.72701in</Left>
+            <Height>3.21181in</Height>
+            <Width>6.85417in</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle6">
+            <ReportItems>
+              <Subreport Name="Growth">
+                <ReportName>BP-Growth</ReportName>
+                <Parameters>
+                  <Parameter Name="BudgetID">
+                    <Value>=Parameters!BudgetID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PropertyID">
+                    <Value>=Parameters!PropertyID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="GrowthCategory">
+                    <Value>=Parameters!GrowthCategory.Value</Value>
+                  </Parameter>
+                  <Parameter Name="GrowthAmount">
+                    <Value>=Parameters!GrowthAmount.Value</Value>
+                  </Parameter>
+                  <Parameter Name="Time">
+                    <Value>=Parameters!Time.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <Height>2.80208in</Height>
+                <Width>6.85417in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <PageBreak>
+              <BreakLocation>Start</BreakLocation>
+            </PageBreak>
+            <PageName>9 Other Income/Smart Packages</PageName>
+            <KeepTogether>true</KeepTogether>
+            <Top>26.55026in</Top>
+            <Left>0.727in</Left>
+            <Height>3.10069in</Height>
+            <Width>6.85417in</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle7">
+            <ReportItems>
+              <Subreport Name="Expenses">
+                <ReportName>BP-Expenses - View</ReportName>
+                <Parameters>
+                  <Parameter Name="BudgetID">
+                    <Value>=Parameters!BudgetID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PropertyID">
+                    <Value>=Parameters!PropertyID.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <Height>3.30208in</Height>
+                <Width>6.85417in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <PageBreak>
+              <BreakLocation>Start</BreakLocation>
+            </PageBreak>
+            <PageName>10 Expenses</PageName>
+            <KeepTogether>true</KeepTogether>
+            <Top>29.67873in</Top>
+            <Left>0.72701in</Left>
+            <Height>3.30903in</Height>
+            <Width>6.85417in</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle8">
+            <ReportItems>
+              <Subreport Name="Upload">
+                <ReportName>BP-Yardi Export</ReportName>
+                <Parameters>
+                  <Parameter Name="BudgetID">
+                    <Value>=Parameters!BudgetID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PropertyID">
+                    <Value>=Parameters!PropertyID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="Tree">
+                    <Value>=Parameters!Tree.Value</Value>
+                  </Parameter>
+                  <Parameter Name="ParamExpandOrCollapse">
+                    <Value>=Parameters!ParamExpandOrCollapse.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <Height>3.30208in</Height>
+                <Width>6.85417in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <PageBreak>
+              <BreakLocation>Start</BreakLocation>
+            </PageBreak>
+            <PageName>11 Upload</PageName>
+            <KeepTogether>true</KeepTogether>
+            <Top>33.20304in</Top>
+            <Left>0.727in</Left>
+            <Height>3.33333in</Height>
+            <Width>6.85417in</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Rectangle9">
+            <ReportItems>
+              <Subreport Name="Signature">
+                <ReportName>BP-Signature</ReportName>
+                <Parameters>
+                  <Parameter Name="BudgetID">
+                    <Value>=Parameters!BudgetID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="PropertyID">
+                    <Value>=Parameters!PropertyID.Value</Value>
+                  </Parameter>
+                  <Parameter Name="Action">
+                    <Value>=Parameters!Action.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <Left>0.00001in</Left>
+                <Height>3.82292in</Height>
+                <Width>6.85417in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <PageBreak>
+              <BreakLocation>Start</BreakLocation>
+            </PageBreak>
+            <PageName>12 Signature</PageName>
+            <KeepTogether>true</KeepTogether>
+            <Top>36.73429in</Top>
+            <Left>0.727in</Left>
+            <Height>3.82292in</Height>
+            <Width>6.85418in</Width>
+            <ZIndex>11</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Line Name="Line1">
+            <Top>0.45833in</Top>
+            <Left>0.14611in</Left>
+            <Height>0in</Height>
+            <Width>8.29041in</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <Border>
+                <Color>DimGray</Color>
+                <Style>Solid</Style>
+                <Width>6pt</Width>
+              </Border>
+              <TopBorder>
+                <Style>Solid</Style>
+                <Width>6pt</Width>
+              </TopBorder>
+              <BottomBorder>
+                <Style>Solid</Style>
+                <Width>6pt</Width>
+              </BottomBorder>
+              <LeftBorder>
+                <Style>Solid</Style>
+                <Width>6pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Style>Solid</Style>
+                <Width>6pt</Width>
+              </RightBorder>
+            </Style>
+          </Line>
+          <Textbox Name="BudgetID">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Property ID:</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Parameters!PropertyID.Value</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> Budget ID: </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Parameters!BudgetID.Value</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>BudgetID</rd:DefaultName>
+            <Top>0.52777in</Top>
+            <Left>0.14611in</Left>
+            <Height>0.2742in</Height>
+            <Width>8.29041in</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <TopBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </TopBorder>
+              <BottomBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </BottomBorder>
+              <LeftBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </RightBorder>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Rectangle Name="Rectangle10">
+            <ReportItems>
+              <Image Name="Image3">
+                <Source>Embedded</Source>
+                <Value>BHLogoBlack2</Value>
+                <Sizing>FitProportional</Sizing>
+                <Height>0.38889in</Height>
+                <Width>3.25in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Image>
+              <Textbox Name="Textbox38">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>PROPERTY INFORMATION</Value>
+                        <Style>
+                          <FontFamily>gill Sans MT</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox7</rd:DefaultName>
+                <Left>3.24118in</Left>
+                <Height>0.39in</Height>
+                <Width>4.16458in</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <VerticalAlign>Middle</VerticalAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Left>0.14611in</Left>
+            <Height>0.39in</Height>
+            <Width>8.53927in</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+        </ReportItems>
+        <Height>41.71347in</Height>
+        <Style />
+      </Body>
+      <Width>10.79in</Width>
+      <Page>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="Action">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>Action</DataSetName>
+          <ValueField>Action</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Action</Prompt>
+      <Hidden>true</Hidden>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>Action</DataSetName>
+          <ValueField>Action</ValueField>
+          <LabelField>Action</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <UsedInQuery>True</UsedInQuery>
+    </ReportParameter>
+    <ReportParameter Name="BudgetID">
+      <DataType>String</DataType>
+      <Prompt>Budget ID</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PropertyID">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>PropertyID</DataSetName>
+          <ValueField>PropertyID</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Property ID</Prompt>
+      <Hidden>true</Hidden>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>PropertyID</DataSetName>
+          <ValueField>PropertyID</ValueField>
+          <LabelField>PropertyID</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="ParamExpandOrCollapse">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Expand</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ParamExpandOrCollapse</Prompt>
+      <Hidden>true</Hidden>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>Expand</Value>
+            <Label>Expand</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>Collapse</Value>
+            <Label>Collapse</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+      <UsedInQuery>True</UsedInQuery>
+    </ReportParameter>
+    <ReportParameter Name="Tree">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>="Budget Tree Final"</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Tree</Prompt>
+      <Hidden>true</Hidden>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>="Budget Tree Final"</Value>
+            <Label>="Budget Tree Final"</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+      <UsedInQuery>True</UsedInQuery>
+    </ReportParameter>
+    <ReportParameter Name="GrowthCategory">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>Growth</DataSetName>
+          <ValueField>Label</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Growth Type</Prompt>
+      <Hidden>true</Hidden>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>Growth</DataSetName>
+          <ValueField>Label</ValueField>
+          <LabelField>Label</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <UsedInQuery>True</UsedInQuery>
+    </ReportParameter>
+    <ReportParameter Name="GrowthAmount">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=(3.5)&amp;"%"</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Amount</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+    <ReportParameter Name="Time">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>DistributeEquallyMonthly_DefaultValue</DataSetName>
+          <ValueField>Label</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Distribute Equally/Monthly</Prompt>
+      <Hidden>true</Hidden>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>BudgetDates</DataSetName>
+          <ValueField>date</ValueField>
+          <LabelField>date</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <UsedInQuery>True</UsedInQuery>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>3</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>Action</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>ParamExpandOrCollapse</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>2</RowIndex>
+          <ParameterName>GrowthAmount</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>GrowthCategory</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>Tree</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>2</RowIndex>
+          <ParameterName>Time</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>BudgetID</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>PropertyID</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <EmbeddedImages>
+    <EmbeddedImage Name="BHLogoBlack2">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>/9j/4AAQSkZJRgABAQEAeAB4AAD/4RDyRXhpZgAATU0AKgAAAAgABAE7AAIAAAANAAAISodpAAQAAAABAAAIWJydAAEAAAAaAAAQ0OocAAcAAAgMAAAAPgAAAAAc6gAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEpvcmdlIE1lcmxvcwAAAAWQAwACAAAAFAAAEKaQBAACAAAAFAAAELqSkQACAAAAAzE4AACSkgACAAAAAzE4AADqHAAHAAAIDAAACJoAAAAAHOoAAAAIAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyMDE5OjA2OjA0IDE1OjQyOjMxADIwMTk6MDY6MDQgMTU6NDI6MzEAAABKAG8AcgBnAGUAIABNAGUAcgBsAG8AcwAAAP/hCx9odHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0n77u/JyBpZD0nVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkJz8+DQo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIj48cmRmOlJERiB4bWxuczpy
+ZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSJ1dWlkOmZhZjViZGQ1LWJhM2QtMTFkYS1hZDMxLWQzM2Q3NTE4MmYxYiIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIi8+PHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9InV1aWQ6ZmFmNWJkZDUtYmEzZC0xMWRhLWFkMzEtZDMzZDc1MTgyZjFiIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iPjx4bXA6Q3JlYXRlRGF0ZT4yMDE5LTA2LTA0VDE1OjQyOjMxLjE3NjwveG1wOkNyZWF0ZURhdGU+PC9yZGY6RGVzY3JpcHRpb24+PHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9InV1aWQ6ZmFmNWJkZDUtYmEzZC0xMWRhLWFkMzEtZDMzZDc1MTgyZjFiIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPjxkYzpjcmVhdG9yPjxyZGY6U2VxIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+PHJkZjpsaT5Kb3JnZSBNZXJsb3M8L3JkZjpsaT48L3JkZjpTZXE+DQoJCQk8L2RjOmNyZWF0b3I+PC9yZGY6RGVzY3JpcHRpb24+PC9yZGY6UkRGPjwveDp4bXBtZXRhPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3hwYWNrZXQgZW5kPSd3Jz8+/9sAQwAHBQUGBQQHBgUGCAcHCAoRCwoJCQoVDxAMERgVGhkYFRgXGx4nIRsdJR0XGCIuIiUoKSssKxogLzMvKjInKisq/9sAQwEHCAgKCQoUCwsUKhwYHCoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioq/8AAEQgAPwH+AwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hp
+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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>2872cd02-0157-4da8-9020-7fa04fbe7dfb</rd:ReportID>
+</Report>

@@ -5,6 +5,7 @@
 
 # User-specific files
 *.rsuser
+*.rptproj.ruser
 *.suo
 *.user
 *.userosscache

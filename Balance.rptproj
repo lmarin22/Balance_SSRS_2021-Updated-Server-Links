@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <FullPath>Debug</FullPath>
+    <OutputPath>bin\debug</OutputPath>
+    <ErrorLevel>2</ErrorLevel>
+    <OverwriteDatasets>False</OverwriteDatasets>
+    <OverwriteDataSources>True</OverwriteDataSources>
+    <TargetServerVersion>SSRS2016</TargetServerVersion>
+    <Platform>Win32</Platform>
+    <TargetReportFolder>Balance/Account Administration</TargetReportFolder>
+    <TargetDatasetFolder>Datasets</TargetDatasetFolder>
+    <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
+    <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
+    <TargetServerURL>http://10.204.10.105/reportserver</TargetServerURL>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'DebugLocal' ">
+    <FullPath>DebugLocal</FullPath>
+    <OutputPath>bin\debug</OutputPath>
+    <ErrorLevel>2</ErrorLevel>
+    <OverwriteDatasets>False</OverwriteDatasets>
+    <OverwriteDataSources>False</OverwriteDataSources>
+    <TargetServerVersion>SSRS2016</TargetServerVersion>
+    <Platform>Win32</Platform>
+    <TargetReportFolder>Balance/Account Administration</TargetReportFolder>
+    <TargetDatasetFolder>Datasets</TargetDatasetFolder>
+    <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
+    <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
+    <TargetServerURL>http://10.200.133.105/ReportServer</TargetServerURL>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <FullPath>Release</FullPath>
+    <OutputPath>bin\debug</OutputPath>
+    <ErrorLevel>2</ErrorLevel>
+    <OverwriteDatasets>False</OverwriteDatasets>
+    <OverwriteDataSources>False</OverwriteDataSources>
+    <TargetServerVersion>SSRS2016</TargetServerVersion>
+    <Platform>Win32</Platform>
+    <TargetReportFolder>Balance/Account Administration</TargetReportFolder>
+    <TargetDatasetFolder>Datasets</TargetDatasetFolder>
+    <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
+    <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
+    <TargetServerURL>http://10.200.133.105/ReportServer</TargetServerURL>
+  </PropertyGroup>
+  <PropertyGroup>
+    <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkZGwzMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAiIHhtbG5zOmRkbDMwMF8zMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAvMzAwIiB4bWxuczpkZGw0MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAiIHhtbG5zOmRkbDQwMF80MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAvNDAwIiB4bWxuczpkZGw1MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAiIHhtbG5zOmRkbDUwMF81MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAvNTAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
+    <DataSources>@(DataSource)</DataSources>
+    <DataSets>@(DataSet)</DataSets>
+    <Reports>@(Report)</Reports>
+  </PropertyGroup>
+  <ItemGroup>
+    <DataSource Include="DW_Elite_SSRS_2021Balance.rds" />
+  </ItemGroup>
+  <ItemGroup>
+    <Report Include="Accounts.rdl" />
+    <Report Include="Balance - Admin.rdl" />
+    <Report Include="Bonus-Override.rdl" />
+    <Report Include="Bonus.rdl" />
+    <Report Include="BP-Bonus.rdl" />
+    <Report Include="BP-BudgetPackage.rdl" />
+    <Report Include="BP-Expenses - View.rdl" />
+    <Report Include="BP-GL Overview.rdl" />
+    <Report Include="BP-Growth.rdl" />
+    <Report Include="BP-Operations - View.rdl" />
+    <Report Include="BP-Payroll.rdl" />
+    <Report Include="BP-Rehab Amenities - View.rdl" />
+    <Report Include="BP-Signature.rdl" />
+    <Report Include="BP-Summary By GL Category.rdl" />
+    <Report Include="BP-Summary By GL.rdl" />
+    <Report Include="BP-Yardi Export.rdl" />
+    <Report Include="Budget Packet.rdl" />
+    <Report Include="Budget Year.rdl" />
+    <Report Include="BudgetID - Selector.rdl" />
+    <Report Include="BudgetPackage.rdl" />
+    <Report Include="CapEx.rdl" />
+    <Report Include="Chart_Of_Accounts - 24 Months Financials.rdl" />
+    <Report Include="Chart_Of_Accounts.rdl" />
+    <Report Include="Chart_Of_Accounts_Financial_Category - Custom Line.rdl" />
+    <Report Include="Chart_Of_Accounts_Financial_Category - View.rdl" />
+    <Report Include="Chart_Of_Accounts_Financial_Category.rdl" />
+    <Report Include="Chart_Of_Accounts_Financial_CategoryAccounts - Custom Line.rdl" />
+    <Report Include="Chart_Of_Accounts_Financial_CategoryAccounts - View.rdl" />
+    <Report Include="Chart_Of_Accounts_Financial_CategoryAccounts.rdl" />
+    <Report Include="Chart_Of_Accounts_Financial_Category_Order.rdl" />
+    <Report Include="Chart_Of_Accounts_Financial_CompleteTree_View.rdl" />
+    <Report Include="Chart_Of_Accounts_Financial_Tree - View.rdl" />
+    <Report Include="Chart_Of_Accounts_Financial_Tree.rdl" />
+    <Report Include="Comments.rdl" />
+    <Report Include="Construction.rdl" />
+    <Report Include="Copy (2) of Overrides.rdl" />
+    <Report Include="Copy of External-Comments-Test-Button.rdl" />
+    <Report Include="Copy of Overrides.rdl" />
+    <Report Include="Date Manager - Add.rdl" />
+    <Report Include="Date Manager - Delete.rdl" />
+    <Report Include="Date Manager - Update.rdl" />
+    <Report Include="Date Manager - View.rdl" />
+    <Report Include="Expenses - ADD.rdl" />
+    <Report Include="Expenses - Delete.rdl" />
+    <Report Include="Expenses - Opt.rdl" />
+    <Report Include="Expenses - View.rdl" />
+    <Report Include="Fees.rdl" />
+    <Report Include="Formula Assignments - Add.rdl" />
+    <Report Include="Formula Assignments - Delete.rdl" />
+    <Report Include="Formula Assignments - Update.rdl" />
+    <Report Include="Formula Assignments - View.rdl" />
+    <Report Include="Formula Bucket - Add.rdl" />
+    <Report Include="Formula Bucket - Delete.rdl" />
+    <Report Include="Formula Bucket - Update.rdl" />
+    <Report Include="Formula Bucket - View.rdl" />
+    <Report Include="GL Overview - Backup.rdl" />
+    <Report Include="GL Overview.rdl" />
+    <Report Include="Growth.rdl" />
+    <Report Include="Growth_RevMgmt.rdl" />
+    <Report Include="Index.rdl" />
+    <Report Include="Insurance.rdl" />
+    <Report Include="Maint-Turn cost-Add.rdl" />
+    <Report Include="Maint-Turn cost-View.rdl" />
+    <Report Include="Market.rdl" />
+    <Report Include="Operations - Override.rdl" />
+    <Report Include="Operations - View.rdl" />
+    <Report Include="Operations RM - Override.rdl" />
+    <Report Include="Operations RM - View.rdl" />
+    <Report Include="Other Amenities - Override.rdl" />
+    <Report Include="Other Amenities - View.rdl" />
+    <Report Include="Overrides - ManualGPR.rdl" />
+    <Report Include="Overrides - Override GPR.rdl" />
+    <Report Include="Overrides - Override.rdl" />
+    <Report Include="Overrides - View.rdl" />
+    <Report Include="Overrides.rdl" />
+    <Report Include="Packet - Bonus.rdl" />
+    <Report Include="Packet - Expenses - View.rdl" />
+    <Report Include="Packet - GL Overview.rdl" />
+    <Report Include="Packet - Growth.rdl" />
+    <Report Include="Packet - Operations - View.rdl" />
+    <Report Include="Packet - Rehab Amenities - View.rdl" />
+    <Report Include="Packet - Signature.rdl" />
+    <Report Include="Packet - Summary By GL.rdl" />
+    <Report Include="Packet - Yardi Export.rdl" />
+    <Report Include="Payroll - Add Employee_ADD.rdl" />
+    <Report Include="Payroll - Add Employee_ADD_CM.rdl" />
+    <Report Include="Payroll - Add Employee_Delete CM.rdl" />
+    <Report Include="Payroll - Add Employee_Delete.rdl" />
+    <Report Include="Payroll - Add Employee_VIEW.rdl" />
+    <Report Include="Payroll - Add Employee_VIEW_CM.rdl" />
+    <Report Include="Payroll - Update-CM.rdl" />
+    <Report Include="Payroll - Update.rdl" />
+    <Report Include="Payroll - View - CM.rdl" />
+    <Report Include="Payroll - View.rdl" />
+    <Report Include="Product Home Screen.rdl" />
+    <Report Include="Rehab Amenities - Override.rdl" />
+    <Report Include="Rehab Amenities - View.rdl" />
+    <Report Include="Reporting.rdl" />
+    <Report Include="Signature.rdl" />
+    <Report Include="Smart Home Pipeline.rdl" />
+    <Report Include="Summary By GL.rdl" />
+    <Report Include="Taxes - Override.rdl" />
+    <Report Include="Taxes Main.rdl" />
+    <Report Include="test external RDL.rdl" />
+    <Report Include="Test Template.rdl" />
+    <Report Include="Trailing12MonthActualFinancials.rdl" />
+    <Report Include="Trailing12MonthFinancials_Add.rdl" />
+    <Report Include="Unit - Mix - Add.rdl" />
+    <Report Include="Unit - Mix - View.rdl" />
+    <Report Include="Utilities - Overrides.rdl" />
+    <Report Include="Utilities.rdl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
+</Project>
