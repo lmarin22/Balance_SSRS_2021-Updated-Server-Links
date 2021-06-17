@@ -74,7 +74,7 @@
 DISTINCT [PropertyNo]
 
 
-FROM [DW_Elite].[dbo].[GLAccountByProperty36Months_WithAggGL]
+FROM [BIS-SQL01].[DW_Elite].[dbo].[GLAccountByProperty36Months_WithAggGL]
 ORDER BY [PropertyNo] ASC</CommandText>
       </Query>
       <Fields>

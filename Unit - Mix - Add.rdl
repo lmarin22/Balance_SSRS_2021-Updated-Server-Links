@@ -224,9 +224,7 @@ WHERE DM.[BudgetID] = @BudgetID</CommandText>
             <Value>=Parameters!PropertyID.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>
-
-		SELECT
+        <CommandText>		SELECT
 		[Property #] =''
 		,[Unit Type] = 'Blank'
 		,[UnitMixDate]=''
@@ -241,7 +239,7 @@ select * from(
 						[Property #]
 						,[Unit Type]
 						ORDER BY convert(date,concat([year], format(Month(CONVERT(NVARCHAR, [month])+ ' ' + CONVERT(NVARCHAR, [year])),'00'),'01')) DESC) AS [NewestUM]
-		FROM [DW_Elite].[dbo].[YardiFloorPlanDetail]) A
+		FROM [BIS-SQL01].[DW_Elite].[dbo].[YardiFloorPlanDetail]) A
 where a.newestUM = '1'
 AND A.[Property #] = @PropertyID
 order by [Unit Type] ASC</CommandText>

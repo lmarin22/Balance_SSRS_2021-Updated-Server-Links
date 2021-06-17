@@ -104,7 +104,7 @@ WHERE DM.[BudgetID] = @BudgetID</CommandText>
 
 
 FROM [DW_Elite_SSRS].[dbo].[Date_Manager] (NOLOCK)											DM
-LEFT JOIN  [DW_Elite].[dbo].[GLAccountByProperty36Months_WithAggGL] (NOLOCK)				GLA ON GLA.PropertyNo = DM.PropertyID COLLATE DATABASE_DEFAULT
+LEFT JOIN  [BIS-SQL01].[DW_Elite].[dbo].[GLAccountByProperty36Months_WithAggGL] GLA WITH (NOLOCK) ON GLA.PropertyNo = DM.PropertyID COLLATE DATABASE_DEFAULT
 RIGHT JOIN [DW_Elite_SSRS].[dbo].[Chart_Of_Accounts_Financial_CategoryAccounts] (NOLOCK)	CA ON CA.Account = GLA.GLAccount COLLATE DATABASE_DEFAULT
 
 

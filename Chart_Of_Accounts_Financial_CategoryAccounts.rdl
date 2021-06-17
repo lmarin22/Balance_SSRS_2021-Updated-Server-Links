@@ -213,8 +213,7 @@ DISTINCT
 	
 
 
-FROM [DW_Elite_SSRS].[dbo].[Chart_Of_Accounts_Financial_Category]
-</CommandText>
+FROM [DW_Elite_SSRS].[dbo].[Chart_Of_Accounts_Financial_Category]</CommandText>
       </Query>
       <Fields>
         <Field Name="Tree">

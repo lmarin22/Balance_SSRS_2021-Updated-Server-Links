@@ -120,8 +120,8 @@ ORDER BY Tree ASC</CommandText>
 TUL.[Property ID]
       ,TUL.[Property Name]
 	  , LTRIM(RTRIM(TUL.[Property ID]))+ ' - ' +TUL.[Property Name] AS [Property]
-FROM [BIS-SQL01].[DW_Elite].[dbo].[GLAccountByProperty36Months_WithAggGL] (NOLOCK) GL
-LEFT JOIN [BIS-SQL01].[DW_Elite].[dbo].[YardiTotalUnitsList] (NOLOCK) TUL ON TUL.[Property ID] = GL.PropertyNo
+FROM [BIS-SQL01].[DW_Elite].[dbo].[GLAccountByProperty36Months_WithAggGL] GL WITH (NOLOCK) 
+LEFT JOIN [BIS-SQL01].[DW_Elite].[dbo].[YardiTotalUnitsList] TUL WITH (NOLOCK)  ON TUL.[Property ID] = GL.PropertyNo
 
 WHERE TUL.[Property ID] IS NOT NULL
 ORDER BY TUL.[Property ID] ASC</CommandText>

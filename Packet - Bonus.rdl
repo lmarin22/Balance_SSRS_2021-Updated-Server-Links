@@ -109,7 +109,7 @@ WHERE DM.[BudgetID] = @BudgetID</CommandText>
 		,TUL.[Unit Count]
 		, LTRIM(RTRIM(TUL.[Property ID]))+ ' - ' +TUL.[Property Name] AS [Property]
 
-FROM [DW_Elite].[dbo].[YardiTotalUnitsList] (NOLOCK) TUL 
+FROM [BIS-SQL01].[DW_Elite].[dbo].[YardiTotalUnitsList] TUL WITH (NOLOCK)  
 
 WHERE 
 		TUL.[Property ID] IS NOT NULL
@@ -186,8 +186,7 @@ SELECT [BudgetID]
 FROM [DW_Elite_SSRS].[dbo].[BonusYearlyInputs]
 where [Bonus Type] IN ('6170-09 Delinquency Bonus','6170-09 Discretionary Bonus')
 and BudgetID = @BudgetID) 
-END
-</CommandText>
+END</CommandText>
       </Query>
       <Fields>
         <Field Name="BudgetID">
@@ -320,7 +319,7 @@ B.[BudgetID]
 ,B.[T12YearMM]
 ,B.BudgetYearMM
 ,A.[ActualAmount]
-  FROM [DW_Elite].[dbo].[GLAccountByProperty36Months_WithAggGL] A
+  FROM [BIS-SQL01].[DW_Elite].[dbo].[GLAccountByProperty36Months_WithAggGL] A WITH (NOLOCK)
 RIGHT JOIN [DW_Elite_SSRS].[dbo].[BudgetYearMM] B ON B.PropertyID = A.[PropertyNo] COLLATE Database_Default
 												 AND B.[T12YearMM] = CONVERT(DATE,CONCAT(A.[YearMM],'01'),126)
 WHERE B.[BudgetID] = @BudgetID

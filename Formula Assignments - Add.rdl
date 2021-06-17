@@ -55,8 +55,7 @@ DISTINCT
       ,[AccountName]
        ,[Account]+ ' - ' +[AccountName] as 'Accounts'
 
-FROM [DW_Elite_SSRS].[dbo].[Chart_Of_Accounts_Financial_CategoryAccounts]
-</CommandText>
+FROM [DW_Elite_SSRS].[dbo].[Chart_Of_Accounts_Financial_CategoryAccounts]</CommandText>
       </Query>
       <Fields>
         <Field Name="Account">

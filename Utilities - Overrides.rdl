@@ -117,8 +117,7 @@ SELECT '4792-00 - Utility Reimbursement-Gas'AS [Label] UNION ALL
 SELECT '4793-00 - Utility Reimbursement-Electric'AS [Label] UNION ALL
 SELECT '4794-00 - Utility Reimbursement-Trash'AS [Label] UNION ALL
 SELECT '4795-00 - Utility Reimbursement-Valet Trash'AS [Label] UNION ALL
-SELECT '4799-00 - Utility Reimbursement-Other'AS [Label]
-</CommandText>
+SELECT '4799-00 - Utility Reimbursement-Other'AS [Label]</CommandText>
       </Query>
       <Fields>
         <Field Name="Label">

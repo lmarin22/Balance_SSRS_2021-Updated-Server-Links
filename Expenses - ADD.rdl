@@ -102,8 +102,7 @@
     <DataSet Name="Action">
       <Query>
         <DataSourceName>DW_Elite_SSRS</DataSourceName>
-        <CommandText>select 'Add' as Action 
-</CommandText>
+        <CommandText>select 'Add' as Action </CommandText>
       </Query>
       <Fields>
         <Field Name="Action">

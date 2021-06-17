@@ -156,7 +156,7 @@
 		, LTRIM(RTRIM(TUL.[Property ID]))+ ' - '+ LTRIM(RTRIM(TUL.[Property Name])) [Property Label]
 
 FROM [DW_Elite_SSRS].[dbo].[Date_Manager] (NOLOCK)	DM
-LEFT JOIN DW_Elite.dbo.YardiTotalUnitsList (NOLOCK) TUL ON TUL.[Property ID] = DM.PropertyID COLLATE DATABASE_DEFAULT
+LEFT JOIN [BIS-SQL01].[DW_Elite].dbo.YardiTotalUnitsList TUL WITH(NOLOCK)  ON TUL.[Property ID] = DM.PropertyID COLLATE DATABASE_DEFAULT
 
 ORDER BY TUL.[Property ID] ASC</CommandText>
       </Query>

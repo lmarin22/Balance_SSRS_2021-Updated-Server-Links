@@ -83,8 +83,7 @@ FROM [DW_Elite_SSRS].[dbo].[FormulaBucket]</CommandText>
 FormulaDescription
 FROM [DW_Elite_SSRS].[dbo].[FormulaBucket]
 
-WHERE FormulaID = @FormulaID
-</CommandText>
+WHERE FormulaID = @FormulaID</CommandText>
       </Query>
       <Fields>
         <Field Name="FormulaDescription">

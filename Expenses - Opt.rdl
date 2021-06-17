@@ -81,8 +81,7 @@
     <DataSet Name="Action">
       <Query>
         <DataSourceName>DW_Elite_SSRS</DataSourceName>
-        <CommandText>select 'View' as Action
-</CommandText>
+        <CommandText>select 'View' as Action</CommandText>
       </Query>
       <Fields>
         <Field Name="Action">

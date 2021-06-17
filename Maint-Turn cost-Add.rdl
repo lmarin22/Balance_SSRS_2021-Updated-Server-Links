@@ -180,7 +180,7 @@ FROM [DW_Elite_SSRS].[dbo].[Date_Manager] DM
 ,SUM([Down]) AS [Down]
 ,SUM([Model]) AS [Model]
 
-FROM [DW_Elite].[dbo].[YardiFloorPlanDetail] YFP
+FROM [BIS-SQL01].[DW_Elite].[dbo].[YardiFloorPlanDetail] YFP WITH (NOLOCK)
 GROUP BY YFP.[Property #],YFP.[Month],YFP.[Year]</CommandText>
       </Query>
       <Fields>
@@ -261,7 +261,7 @@ SELECT [PropertyNo]
 	  ,DATEADD(YEAR,2,convert(date,CONCAT([YearMM],'01'))) AS [DATE]
       ,SUM([ActualAmount]) AS [ActualAmount]
 
-  FROM [DW_Elite].[dbo].[GLAccountByProperty36Months_WithAggGL]
+  FROM [BIS-SQL01].[DW_Elite].[dbo].[GLAccountByProperty36Months_WithAggGL]
   where PropertyNo = @PropertyID
   --and GLAccount = LEFT(@Entry,7)
   GROUP BY [PropertyNo], [GLAccount],[YearMM]

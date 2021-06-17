@@ -85,8 +85,7 @@ Select'8.00%'AS[Label],0.08AS [VALUE] UNION ALL
 Select'8.50%'AS[Label],0.085AS [VALUE] UNION ALL
 Select'9.00%'AS[Label],0.09AS [VALUE] UNION ALL
 Select'9.50%'AS[Label],0.095AS [VALUE] UNION ALL
-Select'10.00%'AS[Label],0.10AS [VALUE] 
-</CommandText>
+Select'10.00%'AS[Label],0.10AS [VALUE] </CommandText>
       </Query>
       <Fields>
         <Field Name="Label">

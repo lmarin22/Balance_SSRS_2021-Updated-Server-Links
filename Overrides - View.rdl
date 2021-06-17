@@ -148,8 +148,7 @@ WHERE DM.[BudgetID] = @BudgetID</CommandText>
         <DataSourceName>DW_Elite_SSRS</DataSourceName>
         <CommandText>select 
 DISTINCT [Tree]
-from [DW_Elite_SSRS].[dbo].[Chart_Of_Accounts_Financial_CategoryAccounts]
-</CommandText>
+from [DW_Elite_SSRS].[dbo].[Chart_Of_Accounts_Financial_CategoryAccounts]</CommandText>
       </Query>
       <Fields>
         <Field Name="Tree">

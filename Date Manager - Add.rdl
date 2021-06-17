@@ -107,7 +107,7 @@ TUL.[Property ID]
 
      
 FROM [DW_Elite_SSRS].[dbo].[Date_Manager](NOLOCK) B 
-LEFT JOIN [DW_Elite].[dbo].[YardiTotalUnitsList] (NOLOCK) TUL ON TUL.[Property ID] = B.PropertyID COLLATE DATABASE_DEFAULT
+LEFT JOIN [BIS-SQL01].[DW_Elite].[dbo].[YardiTotalUnitsList] TUL WITH (NOLOCK) ON TUL.[Property ID] = B.PropertyID COLLATE DATABASE_DEFAULT
 
 ORDER BY TUL.[Property ID] ASC
 
@@ -129,7 +129,7 @@ SELECT DISTINCT
 	  , LTRIM(RTRIM([Property ID]))+ ' - ' +[Property Name] AS [Property]
 
      
-FROM [DW_Elite].[dbo].[YardiTotalUnitsList]
+FROM [BIS-SQL01].[DW_Elite].[dbo].[YardiTotalUnitsList]
 WHERE [Property Status] 
 	in ('Active'
 	, 'Active - 2nd Entity'
@@ -178,8 +178,7 @@ END
 
 UNION ALL 
 
-SELECT 'Due Diligence' AS [Type]
-</CommandText>
+SELECT 'Due Diligence' AS [Type]</CommandText>
       </Query>
       <Fields>
         <Field Name="Type">

@@ -21,7 +21,7 @@
         <CommandText>SELECT 
       [Property_or_Business_Unit_Name_Code]
       ,[Positions_Desc]
-  FROM [DW_Elite].[dbo].[EmployeeCensus]
+  FROM [BIS-SQL01].[DW_Elite].[dbo].[EmployeeCensus]
   where Property_or_Business_Unit_Name_Code = @PropertyID
 and Employee_Status = 'terminated'
 and RIGHT (Termination_Date,4) = YEAR (getdate())
@@ -249,8 +249,7 @@ where [name] NOT IN ('community manager','Community Manager Part Time','Property
 'community manager 1','Community Manager Part Time 1','Property General Manager 1','Senior Community Manager 1',
 'community manager 2','Community Manager Part Time 2','Property General Manager 2','Senior Community Manager 2',
 'community manager 3','Community Manager Part Time 3','Property General Manager 3','Senior Community Manager 3'
-)
-</CommandText>
+)</CommandText>
       </Query>
       <Fields>
         <Field Name="Name">

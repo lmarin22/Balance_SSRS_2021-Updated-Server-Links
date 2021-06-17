@@ -99,7 +99,7 @@ TUL.[Property ID]
 	  , LTRIM(RTRIM( TUL.[Property ID]))+ ' - ' + TUL.[Property Name] AS [Property]
  
 FROM [DW_Elite_SSRS].[dbo].[Date_Manager](NOLOCK) B 
-LEFT JOIN [BIS-SQL01].[DW_Elite].[dbo].[YardiTotalUnitsList] WITH (NOLOCK) TUL 
+LEFT JOIN [BIS-SQL01].[DW_Elite].[dbo].[YardiTotalUnitsList] TUL WITH (NOLOCK)  
 ON TUL.[Property ID] = B.PropertyID COLLATE DATABASE_DEFAULT
 LEFT JOIN [DW_Elite_SSRS].[dbo].[SSRS_Login]  (NOLOCK) C
 ON C.[PropertyID] = B.PropertyID

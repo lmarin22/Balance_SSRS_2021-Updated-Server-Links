@@ -530,7 +530,7 @@ SELECT
 											  ELSE (a.[Rate of pay] * c.[Budget Percentage Increase])
 											  END) /12) *c.[Budget Hours per Week])*52)* (1 + c.[Budget Percentage Increase])
 
-	FROM [DW_Elite].[dbo].[EmployeeCensusActive] a
+	FROM [BIS-SQL01].[DW_Elite].[dbo].[EmployeeCensusActive] a WITH (NOLOCK)
 	LEFT JOIN [DW_Elite_SSRS].[dbo].[Payroll_Update] C
 					ON a.[Property_or_Business_Unit_Name_Code] = c.[PropertyID] COLLATE DATABASE_DEFAULT
 					and a.[Employee_Name] = c.[Employee Name] COLLATE DATABASE_DEFAULT

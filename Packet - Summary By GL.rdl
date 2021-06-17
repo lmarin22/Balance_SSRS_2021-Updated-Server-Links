@@ -174,7 +174,7 @@ DECLARE @UnitCount INT
 --SET @BudgetID = 'Operations-2020-03-09-1004 - Brooksfield-2'
 --SET @Tree = 'Budget Tree AM'
 SET @Growth = .03
-SET @UnitCount = ( SELECT [Unit Count] FROM [DW_Elite].[dbo].[YardiTotalUnitsList]
+SET @UnitCount = ( SELECT [Unit Count] FROM [BIS-SQL01].[DW_Elite].[dbo].[YardiTotalUnitsList]
 WHERE [Property ID] = @PropertyID)
 
 
@@ -247,7 +247,7 @@ SELECT
 
 --INTO TEMP#1
 FROM [DW_Elite_SSRS].[dbo].[Date_Manager] (NOLOCK)											DM
-LEFT JOIN  [DW_Elite].[dbo].[GLAccountByProperty36Months_WithAggGL] (NOLOCK)				GLA ON GLA.PropertyNo = DM.PropertyID COLLATE DATABASE_DEFAULT
+LEFT JOIN  [BIS-SQL01].[DW_Elite].[dbo].[GLAccountByProperty36Months_WithAggGL] GLA WITH (NOLOCK) ON GLA.PropertyNo = DM.PropertyID COLLATE DATABASE_DEFAULT
 RIGHT JOIN [DW_Elite_SSRS].[dbo].[Chart_Of_Accounts_Financial_CategoryAccounts] (NOLOCK)	CA ON CA.Account = GLA.GLAccount COLLATE DATABASE_DEFAULT
 
 WHERE 

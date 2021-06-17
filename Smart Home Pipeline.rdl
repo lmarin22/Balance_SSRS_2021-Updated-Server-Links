@@ -3,20 +3,18 @@
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DW_Elite">
-      <ConnectionProperties>
-        <DataProvider>SQL</DataProvider>
-        <ConnectString>Data Source=10.204.10.85;Initial Catalog=DW_Elite</ConnectString>
-      </ConnectionProperties>
-      <rd:SecurityType>DataBase</rd:SecurityType>
-      <rd:DataSourceID>88896e39-6b61-4f0c-81bb-7ec3f14a49f5</rd:DataSourceID>
+    <DataSource Name="DW_Elite_SSRS_2021Balance">
+      <Transaction>true</Transaction>
+      <DataSourceReference>DW_Elite_SSRS_2021Balance</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>8f60cc3b-ae5a-412a-b949-55bb58bd2c57</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="SmartHome">
       <Query>
-        <DataSourceName>DW_Elite</DataSourceName>
-        <CommandText>SELECT * FROM [DW_Elite].[dbo].[SmartHomePipeline]
+        <DataSourceName>DW_Elite_SSRS_2021Balance</DataSourceName>
+        <CommandText>SELECT * FROM [BIS-SQL01].[DW_Elite].[dbo].[SmartHomePipeline]
 ORDER BY [Prop #] asc</CommandText>
       </Query>
       <Fields>

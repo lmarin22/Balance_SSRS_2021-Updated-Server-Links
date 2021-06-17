@@ -168,7 +168,7 @@ WHERE DM.[BudgetID] = @BudgetID</CommandText>
           </QueryParameter>
         </QueryParameters>
         <CommandText>SELECT [Employee_Name], [employee_code]
-  FROM [DW_Elite].[dbo].[EmployeeCensusActive]
+  FROM [BIS-SQL01].[DW_Elite].[dbo].[EmployeeCensusActive]
 where [Property_or_Business_Unit_Name_Code] = @PropertyID
 AND [Positions_Desc] NOT IN ('community manager','Community Manager Part Time','Property General Manager','Senior Community Manager','sr community manager')
 order by [Employee_Name] ASC</CommandText>
@@ -205,7 +205,7 @@ order by [Employee_Name] ASC</CommandText>
           </QueryParameter>
         </QueryParameters>
         <CommandText>select distinct [Positions_Desc]
-FROM [DW_Elite].[dbo].[EmployeeCensusActive]
+FROM [BIS-SQL01].[DW_Elite].[dbo].[EmployeeCensusActive]
 where [Employee_Name] = @EmployeeName</CommandText>
       </Query>
       <Fields>
@@ -230,7 +230,7 @@ where [Employee_Name] = @EmployeeName</CommandText>
           </QueryParameter>
         </QueryParameters>
         <CommandText>select distinct [Rate of pay],concat('$',[Rate of pay]) as [Label]
-FROM [DW_Elite].[dbo].[EmployeeCensusActive]
+FROM [BIS-SQL01].[DW_Elite].[dbo].[EmployeeCensusActive]
 where [Property_or_Business_Unit_Name_Code] = @PropertyID
 and [Employee_Name] = @EmployeeName
 and [Positions_Desc] =@JobTitle</CommandText>
@@ -238,7 +238,7 @@ and [Positions_Desc] =@JobTitle</CommandText>
       <Fields>
         <Field Name="Rate_of_pay">
           <DataField>Rate of pay</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Label">
           <DataField>Label</DataField>
@@ -262,7 +262,7 @@ and [Positions_Desc] =@JobTitle</CommandText>
         </QueryParameters>
         <CommandText>select distinct [annual salary],
 concat('$',CONVERT(VARCHAR,Convert(money,[annual salary]))) as [Label]
-FROM [DW_Elite].[dbo].[EmployeeCensusActive]
+FROM [BIS-SQL01].[DW_Elite].[dbo].[EmployeeCensusActive]
 where [Property_or_Business_Unit_Name_Code] = @PropertyID
 and [Employee_Name] = @EmployeeName
 and [Positions_Desc] =@JobTitle</CommandText>
